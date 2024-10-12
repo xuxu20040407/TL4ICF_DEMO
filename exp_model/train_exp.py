@@ -56,7 +56,7 @@ class MYDATA(Dataset):
 
 # 使用自定义数据集类
 train_dataset = MYDATA(np.load(r".\DATA\Exp\train.npy"))
-train_dataloader = DataLoader(train_dataset, batch_size=100, drop_last=True, shuffle=True)
+train_dataloader = DataLoader(train_dataset, batch_size=25, drop_last=True, shuffle=True)
 val_dataset = MYDATA(np.load(r".\DATA\Exp\val.npy"))
 val_dataloader = DataLoader(val_dataset, batch_size=100, drop_last=True)
 
@@ -119,6 +119,6 @@ for epoch in range(epochs):
     writer.add_scalar("test_loss", torch.log(test_loss), epoch)
     writer.flush()
 
-torch.save(model.state_dict(), current_dir+'\exp_model.pth')
+torch.save(model.state_dict(), current_dir+r'\exp_model.pth')
 
 

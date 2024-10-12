@@ -54,7 +54,7 @@ class Model(nn.Module):
         return output
 
 
-model_path = current_dir+ r'exp_model.pth'
+model_path = current_dir+ r'\exp_model.pth'
 model = Model()
 model.load_state_dict(torch.load(model_path))
 
@@ -92,6 +92,6 @@ ax.legend()
 plt.savefig(r'.\fig\exp.png')
 
 # 计算预测值和实际值之间的差的平方
-squared_errors = (predictions - actual) ** 2
+squared_errors = (predictions_val - actual_val) ** 2
 variance = np.mean(squared_errors)
 print("Variance of train_data:", variance)

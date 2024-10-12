@@ -116,6 +116,6 @@ ax.legend()
 plt.tight_layout()
 plt.savefig(r'.\fig\high2exp.png')
 
-squared_errors = (predictions - actual) ** 2
+squared_errors = (predictions_val - actual_val) ** 2
 variance = np.mean(squared_errors)
 print("Variance of train_data:", variance)

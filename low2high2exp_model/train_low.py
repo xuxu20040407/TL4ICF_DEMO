@@ -124,6 +124,7 @@ for epoch in range(epochs):
 
 
 torch.save(model.state_dict(), current_dir+r'\low_model.pth')
+torch.save(model.state_dict(), r'.\low2exp_model\low_model.pth')
 
 
 
