@@ -54,7 +54,7 @@ contain the corresponding codes. Take low2high2exp_model as example:
 The eight figures will be saved in the fig folders and there exists a code name plot_table.py to combine them.
 
 The variance of each model of the existing model file:
-|Model name|Epochs|Variance|
+|Model name|Variance|Epochs|
 |---|---|---|
 |Exp|5.23e-4|2000|
 |Low2Exp|3.86e-3|1000&5000|
