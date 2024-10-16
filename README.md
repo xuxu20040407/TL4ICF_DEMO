@@ -20,7 +20,7 @@ In the following chapters, we introduce the method that pre-train the net on the
 Since we want to learn the function form low-fidelity database, we consider the taylor expansion of it:
 $$f(x)=xe^{ax}=x+ax^2+\cdots$$
 
-In "DATA" folder, there are three codes to generate the database of $f_{low}(x)=x$, $f_{high}(x)=x+ax^2$, $f_{exp}(x)=xe^{ax}$ seperately. The size of database is dependent on your model and paramater space, and we recommend the following parameter combinations:
+In "[DATA](https://github.com/xuxu20040407/TL4ICF_DEMO/tree/main/DATA)" folder, there are three codes to generate the database of $f_{low}(x)=x$, $f_{high}(x)=x+ax^2$, $f_{exp}(x)=xe^{ax}$ seperately. The size of database is dependent on your model and paramater space, and we recommend the following parameter combinations:
 |Model name|Description|Learning Path|Size of Database|
 |---|---|---|---|
 |Exp|Experiment|$xe^{ax}$|100|
@@ -41,12 +41,12 @@ The following folders:
 - low2exp_model
 - high2exp_model
 - low2high2exp_model
-contain the corresponding codes. Take low2high2exp_model as example:
+contain the corresponding codes. Take [low2high2exp_model](https://github.com/xuxu20040407/TL4ICF_DEMO/tree/main/low2high2exp_model) as example:
 - train_low.py is used to train the pre_train model from low-fodelity database;
 - train_low_high_exp.py is used to find tune the model from high_fidelity and authentic database;
 - low_high_exp_logs_{time} can be opened by tensorboard to visiualise the error-epoch change;
 - {model}.pth is the model file;
-- plot_reg_low_high_exp.py is used to plot the regreesion figure which will be save to the "fig" folder.
+- plot_reg_low_high_exp.py is used to plot the regreesion figure which will be save to the "[fig](https://github.com/xuxu20040407/TL4ICF_DEMO/tree/main/fig)" folder.
 
 > Be careful that there are two same code named train_low.py in low2exp_model and low2high2exp_model, and each of them produces the same model file named low_model.pth simutaneously in the two folders.
 
