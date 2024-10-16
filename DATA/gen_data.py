@@ -19,11 +19,11 @@ def gen_data(N, a_range, x_range, dist, fidelity):
         a_values = np.linspace(a_range[0], a_range[1], N)
         x_values = np.linspace(x_range[0], x_range[1], N)
 
-    if fidelity == 'Exp':
-        f_values = x_values * np.exp(a_values * x_values)
-    elif fidelity == 'High':
+    if fidelity == 'exp':
+        f_values = x_values * np.exp(a_values * x_values.astype(float))
+    elif fidelity == 'high':
         f_values = x_values + a_values * x_values**2
-    elif fidelity == 'Low':
+    elif fidelity == 'low':
         f_values = x_values
 
     data = np.column_stack((a_values, x_values, f_values))
@@ -35,7 +35,7 @@ def gen_data(N, a_range, x_range, dist, fidelity):
 
 def main():
     data_distribution = ['random', 'uniform']
-    data_fidelity = ['Exp', 'High', 'Low']
+    data_fidelity = ['exp', 'high', 'low']
 
     N = 1000
     a_range = [0, 1]
