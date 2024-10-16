@@ -24,9 +24,9 @@ In "DATA" folder, there are three codes to generate the database of $f_{low}(x)=
 |Model name|Description|Learning Path|Size of Database|
 |---|---|---|---|
 |Exp|Experiment|$xe^{ax}$|100|
-|Low2Exp|Low to Experiment|$x\Rightarrow xe^{ax}$|100$\Rightarrow$25|
-|High2Exp|High to Experiment|$x+ax^2\Rightarrow xe^{ax}$|100$\Rightarrow$25|
-|Low2High2Exp|Low to High then Experiment|$x\Rightarrow x+ax^2\Rightarrow xe^{ax}$|100$\Rightarrow$50$\Rightarrow$25|
+|Low2Exp|Low to Experiment|$x\Rightarrow xe^{ax}$|100 $\Rightarrow$ 25|
+|High2Exp|High to Experiment|$x+ax^2\Rightarrow xe^{ax}$|100 $\Rightarrow$ 25|
+|Low2High2Exp|Low to High then Experiment|$x\Rightarrow x+ax^2\Rightarrow xe^{ax}$|100 $\Rightarrow$ 50 $\Rightarrow$ 25|
 
 with the parameter space:
 $$a\in[0,1],x\in [-1,1]$$
