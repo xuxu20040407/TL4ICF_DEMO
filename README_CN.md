@@ -21,16 +21,16 @@ $$f(x)=xe^{ax}$$
 由于我们想从低保真数据库中学习函数，因此我们考虑对其进行泰勒展开：
 $$f(x)=xe^{ax}=x+ax^2+\cdots$$
 
-在“DATA”文件夹下有三个代码，分别用于生成 $f_{low}(x)=x$、$f_{high}(x)=x+ax^2$、$f_{exp}(x)=xe^{ax}$的数据库。数据库的大小取决于您的模型和参数空间，我们建议使用以下参数组合：
-|模型名称|描述|学习路径|数据库大小
+在“DATA”文件夹下有三个代码，分别用于生成 $f_{low}(x)=x$、 $f_{high}(x)=x+ax^2$、 $f_{exp}(x)=xe^{ax}$的数据库。数据库的大小取决于您的模型和参数空间，我们建议使用以下参数组合：
+|模型名称|描述|学习路径|数据库大小|
 |---|---|---|---|
-|Exp|实验数据直接训练|$xe^{ax}$|100
-|Low2Exp|低保真数据到实验数据|$x\Rightarrow xe^{ax}$|100$\Rightarrow$25
-|High2Exp|高保真数据到实验数据|$x+ax^2\Rightarrow xe^{ax}$|100$\Rightarrow$25|
-|Low2High2Exp|低保真数据到高保真数据到实验数据|$x\Rightarrow x+ax^2\Rightarrow xe^{ax}$|100$\Rightarrow$50$\Rightarrow$25|
+|Exp|实验数据直接训练|$xe^{ax}$|100|
+|Low2Exp|低保真数据到实验数据|$x\Rightarrow xe^{ax}$|100 $\Rightarrow$ 25|
+|High2Exp|高保真数据到实验数据|$x+ax^2\Rightarrow xe^{ax}$|100 $\Rightarrow$ 25|
+|Low2High2Exp|低保真数据到高保真数据到实验数据|$x\Rightarrow x+ax^2\Rightarrow xe^{ax}$|100 $\Rightarrow$ 50 $\Rightarrow$ 25|
 
 参数空间为
-$$a/in[0,1],x/in[-1,1]$$
+$$a\in[0,1],x\in[-1,1]$$
 
 我们还提供了一个名为 “plot ”的简单代码，用于可视化数据库的数据分布。
 > 需要注意的是，每个型号的数据库都不尽相同，不仅在规模上，在具体分布上也不尽相同。抽样方法为随机抽样。
