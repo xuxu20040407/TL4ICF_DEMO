@@ -56,9 +56,10 @@ The eight figures will be saved in the fig folders and there exists a code name 
 The variance of each model of the existing model file:
 |Model name|Variance|Epochs|
 |---|---|---|
-|Exp|5.23e-4|2000|
-|Low2Exp|3.86e-3|1000&5000|
-|High2Exp|4.01e-3|1000&4000|
-|Low2High2Exp|1.45e-3|1000&3000&3000|
+|Exp|0.0028545009815798645|5000|
+|Exp25|0.022953418965737934|5000|
+|Low2Exp|0.027452173900466857|3000&5000|
+|High2Exp|0.020568353927409532|1000&4000|
+|Low2High2Exp|0.006655853783786717|1000&3000&3000|
 
 It's intuitive because the fourth model constains the second most information. We can also predict that if we train exp_model with only 25 piece of data, the exp_model cannot compete with the Low2High2Exp_model. Actually the variance is 1e-2.
